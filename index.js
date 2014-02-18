@@ -36,9 +36,9 @@ function get(request, response) {
 };
 
 function post(request, response) {
-	// TODO: read 'name and email from the request.body'
+	// read 'name and email from the request.body'
 	var newSessionId = login.login(request.body.name, request.body.email);
-	// TODO: set new session id to the 'session_id' cookie in the response
+	// set new session id to the 'session_id' cookie in the response
 	response.setHeader('Set-Cookie', 'session_id=' + newSessionId);
 	// replace "Logged In" response with response.end(login.hello(newSessionId));
 
@@ -47,7 +47,7 @@ function post(request, response) {
 
 function del(request, response) {
 	// console.log("DELETE:: Logout from the server");
- 	// TODO: remove session id via login.logout(xxx)
+ 	// remove session id via login.logout(xxx)
 	var cookies = request.cookies;
 	console.log(cookies);
 	if ('session_id' in cookies) {
