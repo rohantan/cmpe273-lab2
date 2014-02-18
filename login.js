@@ -55,7 +55,7 @@ Login.prototype.refreshsession = function(sessionid) {
 Login.prototype.logout = function(sessionId) {
 	// console.log('logout::' + sessionId);
    /*
-	* TODO: Remove the given sessionId from the sessionMap
+	*  Remove the given sessionId from the sessionMap
 	*/
 	delete this.sessionMap[sessionId];
 	// console.log('Logged out from the server');
